@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'Spartan';
+    src: url(images/LeagueSpartan-VariableFont_wght.ttf) format("truetype");
+}
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    /* font size */
+    --fs-150: 15px;
+
+    /* font weight */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+
+    /* font-family */
+    --ff-spartan: 'Spartan';
+}
+.fs-150 {
+    font-size: var(--fs-150);
+}
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+.fw-500 {
+    font-weight: var(--fw-500);
+}
+.fw-700 {
+    font-weight: var(--fw-700);
+}
+.ff-spartan {
+    font-family: var(--ff-spartan);
+}
+.bg-body {
+    background: url("images/bg-pattern-bottom-desktop.svg");
+}
+.bg-container {
+    background: url("images/bg-pattern-top-mobile.svg");
+}
+.bg-card {
+    background-color: var(--Very-Dark-Magenta);
+}
+.bg-star {
+    background-color: var(--Light-Grayish-Magenta);
+}
+.text-color {
+    color: var(--Dark-Grayish-Magenta);
+}
+.text-white {
+    color: var(--White);
+}
+.text-dark {
+    color: var(--Very-Dark-Magenta);
+}
+.text-pink {
+    color: var(--Soft-Pink);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, p {
+    font-weight: 400;
+}
+
+body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 60%;
+    text-align: center;
+    max-width: 290px;
+    margin: 3rem;
+    flex-direction: column;
+}
+.top {
+    flex-direction: column;
+}
+.preview,
+.star-class,
+.card {
+    padding: 1rem;
+}
+.preview > h1 {
+    padding: 1rem 1.5rem;
+}
+.preview > p {
+    padding: 0 2.5rem 1rem 2.5rem;
+}
+.cards {
+    flex-direction: column;
+}
+.stars {
+    margin: 0 0 1.5rem 0;
+    flex-direction: column;
+}
+.star-class {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+    border-radius: 8px;
+}
+.star-class > p {
+    padding: .5rem 0 0 0;
+}
+.star > img {
+    margin: 0 .15rem;
+}
+.card {
+    margin: 0 0 1rem 0;
+    border-radius: 8px;
+    text-align: left;
+}
+.intro img {
+    border-radius: 50%;
+    width: 15%;
+    max-width: 40px;
+    margin: 0 1rem 0 0;
+}
+.intro {
+    align-items: center;
+    margin: .3rem 0 1.2rem 0;
+}
+.name {
+    flex-direction: column;
+}
+.name > p {
+    margin: .15rem 0;
+}
+.card > p {
+    padding: 0 2.8rem 1rem 0;
+}
+@media (min-width: 50rem) {
+    .container {
+        text-align: left;
+        width: 100%;
+        box-shadow: 1px 1px 3px 3px #000;
+        max-width: 800px;
+    }
+    .top {
+        flex-direction: row;
+    }
+    .preview {
+        width: 40%;
+        margin: 1rem 0 0 0;
+        padding: 0 0 1rem 1rem;
+    }
+    .preview > h1 {
+        padding: 1rem 5rem 1rem 0;
+    }
+    .preview > p {
+        font-size: 13px;
+        padding: 0 2rem 0 0;
+        margin: 0;
+        line-height: 1rem;
+    }
+    .stars {
+        width: 60%;
+        padding: 1rem;
+    }
+    .star-class {
+        align-items: center;
+    }
+    .star-class > p {
+        margin-right: 3rem;
+    }
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+    .one {
+        margin-right: 6rem;
+    }
+    .two {
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+    .three {
+        margin-left: 6rem;
+    }
+    .card-one {
+        margin-bottom: 3rem;
+    }
+    .card-two {
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    .card-three {
+        margin-top: 3rem;
+    }
+}
+@media (min-width: 66rem) {
+    .container {
+        max-width: 1000px;
+    }
+    .preview {
+        padding: 2rem 0 0 5rem;
+    }
+    .preview > h1 {
+        padding: 0 8rem 1rem 0;
+    }
+    .preview > p {
+        padding: 0 0 0 0;
+        font-size: 11px;
+    }
+    .stars {
+        padding: 4rem 5rem 0 0;
+    }
+    .star-class {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .star-class > p {
+        margin-right: 6rem;
+    }
+    .cards {
+        padding: 0 5rem 2.5rem 5rem;
+    }
+}
